@@ -1,0 +1,6 @@
+{
+  "name": "St. Joseph's Degree & PG College",
+  "description": "Official admissions and academic portal for St. Joseph's Degree & PG College, King Koti, Hyderabad — Autonomous, Affiliated to Osmania University.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

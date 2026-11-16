@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #1F5F3F;
+  --primary-dark: #14402B;
+  --accent: #4CAF7A;
+  --accent-light: #DDF1E4;
+  --gold: #D4A533;
+  --bg: #FAF8F2;
+  --surface: #FFFFFF;
+  --text: #1E2A24;
+  --muted: #5E6E66;
+}
+
+@theme {
+  --font-display: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-sans: "DM Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-primary: #1F5F3F;
+  --color-primary-dark: #14402B;
+  --color-accent: #4CAF7A;
+  --color-accent-light: #DDF1E4;
+  --color-gold: #D4A533;
+  --color-bg: #FAF8F2;
+  --color-surface: #FFFFFF;
+  --color-ink: #1E2A24;
+  --color-muted: #5E6E66;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    background-color: var(--bg);
+    color: var(--text);
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 28s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee:hover,
+.animate-marquee:focus-within {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
