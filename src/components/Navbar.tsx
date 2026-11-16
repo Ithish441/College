@@ -42,21 +42,21 @@ export function Navbar({ currentPage, currentCourseSlug, onNavigate }: NavbarPro
       className="sticky top-0 z-40 w-full bg-[#FFFFFF]/98 border-b border-[#1E2A24]/10 shadow-2xs"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-8">
-        {/* Zone 1: Single-line Brand Wordmark */}
+        {/* Zone 1: College SVG Logo */}
         <button
           type="button"
           onClick={() => go('home')}
-          className="flex items-center gap-2.5 text-left focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1F5F3F] rounded-md whitespace-nowrap shrink-0 cursor-pointer"
+          aria-label="St. Joseph's Degree & PG College Home"
+          className="flex items-center focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1F5F3F] rounded-md shrink-0 cursor-pointer"
         >
-          <span
-            aria-hidden="true"
-            className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#1F5F3F] to-[#14402B] flex items-center justify-center text-[#D4A533] font-display font-bold text-sm shadow-sm shrink-0"
-          >
-            SJ
-          </span>
-          <span className="font-display font-bold text-base sm:text-lg tracking-tight text-[#1E2A24] whitespace-nowrap shrink-0">
-            St. Joseph&apos;s College
-          </span>
+          <img
+            src="/assets/aistudio/st-logo_084c5e9f.svg"
+            alt="St. Joseph's Degree & PG College"
+            width={555}
+            height={150}
+            decoding="async"
+            className="h-10 sm:h-11 w-auto object-contain"
+          />
         </button>
 
         {/* Zone 2: Concise Single-Line Navigation Links */}
