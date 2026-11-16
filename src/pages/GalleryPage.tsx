@@ -53,7 +53,7 @@ export function GalleryPage() {
       </section>
 
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="inline-flex flex-wrap items-center gap-1 p-1 bg-[#DDF1E4]/70 rounded-xl mb-8">
+        <div className="flex overflow-x-auto no-scrollbar sm:inline-flex items-center gap-1 p-1 bg-[#DDF1E4]/70 rounded-xl mb-8 max-w-full">
           {GALLERY_CATS.map((cat) => (
             <button
               key={cat}
@@ -62,7 +62,7 @@ export function GalleryPage() {
                 setActiveCat(cat);
                 setSelectedId(null);
               }}
-              className={`relative px-4 py-2 rounded-lg text-xs sm:text-sm font-medium transition-colors cursor-pointer ${
+              className={`relative px-4 py-2 rounded-lg text-xs sm:text-sm font-medium transition-colors whitespace-nowrap shrink-0 cursor-pointer ${
                 activeCat === cat
                   ? 'text-[#14402B] font-semibold'
                   : 'text-[#5E6E66] hover:text-[#1E2A24]'

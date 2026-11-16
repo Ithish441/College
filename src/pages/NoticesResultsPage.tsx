@@ -139,7 +139,7 @@ export function NoticesResultsPage({ onNavigate }: NoticesResultsPageProps) {
                 onChange={(e) => setRollNo(e.target.value)}
                 aria-label="Hall Ticket Number"
                 placeholder="Enter Hall Ticket No."
-                className="rounded-xl border border-[#1E2A24]/20 px-4 py-2.5 text-sm font-mono uppercase text-[#1E2A24] focus:outline-none focus:border-[#1F5F3F] min-w-[220px]"
+                className="w-full sm:w-56 rounded-xl border border-[#1E2A24]/20 px-4 py-2.5 text-sm font-mono uppercase text-[#1E2A24] focus:outline-none focus:border-[#1F5F3F]"
               />
               <button
                 type="submit"
@@ -168,7 +168,7 @@ export function NoticesResultsPage({ onNavigate }: NoticesResultsPageProps) {
               transition={{ duration: 0.16, ease: [0.16, 1, 0.3, 1] }}
               className="mt-6 pt-6 border-t border-[#1E2A24]/12 space-y-5"
             >
-              <div className="grid grid-cols-2 sm:grid-cols-5 gap-4 bg-[#FAF8F2] rounded-2xl p-4 border border-[#1E2A24]/10 text-sm">
+              <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 sm:gap-4 bg-[#FAF8F2] rounded-2xl p-4 border border-[#1E2A24]/10 text-sm">
                 <div>
                   <p className="text-xs text-[#5E6E66]">Student Name</p>
                   <p className="font-display font-bold text-[#1E2A24]">{resultData.studentName}</p>
@@ -191,7 +191,7 @@ export function NoticesResultsPage({ onNavigate }: NoticesResultsPageProps) {
                     {resultData.sgpa} / {resultData.cgpa}
                   </p>
                 </div>
-                <div>
+                <div className="col-span-2 sm:col-span-1">
                   <p className="text-xs text-[#5E6E66]">Result Status</p>
                   <p className="font-semibold text-[#1F5F3F]">{resultData.status}</p>
                 </div>
@@ -232,13 +232,13 @@ export function NoticesResultsPage({ onNavigate }: NoticesResultsPageProps) {
         {/* Notices & Circulars Board */}
         <div className="space-y-6">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-            <div className="flex flex-wrap items-center gap-1 p-1 bg-[#DDF1E4]/70 rounded-xl">
+            <div className="flex overflow-x-auto no-scrollbar sm:flex-wrap items-center gap-1 p-1 bg-[#DDF1E4]/70 rounded-xl max-w-full">
               {CATEGORIES.map((cat) => (
                 <button
                   key={cat}
                   type="button"
                   onClick={() => setCategory(cat)}
-                  className={`relative px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-colors cursor-pointer ${
+                  className={`relative px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-colors whitespace-nowrap shrink-0 cursor-pointer ${
                     category === cat
                       ? 'text-[#14402B] font-semibold'
                       : 'text-[#5E6E66] hover:text-[#1E2A24]'

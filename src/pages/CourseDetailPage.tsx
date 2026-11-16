@@ -85,26 +85,28 @@ export function CourseDetailPage({ courseSlug, onNavigate }: CourseDetailPagePro
           </div>
 
           {/* 4-Column Key Specs Strip Below Hero Split */}
-          <div className="mt-10 grid grid-cols-2 lg:grid-cols-4 gap-4">
-            <div className="rounded-2xl bg-[#FFFFFF]/10 border border-[#DDF1E4]/20 p-4">
-              <p className="text-xs text-[#DDF1E4]/80">Program Duration</p>
-              <p className="font-display font-bold text-lg text-white mt-1">{course.duration}</p>
+          <div className="mt-8 sm:mt-10 grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+            <div className="rounded-2xl bg-[#FFFFFF]/10 border border-[#DDF1E4]/20 p-3.5 sm:p-4">
+              <p className="text-[11px] sm:text-xs text-[#DDF1E4]/80">Program Duration</p>
+              <p className="font-display font-bold text-base sm:text-lg text-white mt-1">
+                {course.duration}
+              </p>
             </div>
-            <div className="rounded-2xl bg-[#FFFFFF]/10 border border-[#DDF1E4]/20 p-4">
-              <p className="text-xs text-[#DDF1E4]/80">Approved Intake</p>
-              <p className="font-display font-bold text-lg text-white mt-1 tabular-nums">
+            <div className="rounded-2xl bg-[#FFFFFF]/10 border border-[#DDF1E4]/20 p-3.5 sm:p-4">
+              <p className="text-[11px] sm:text-xs text-[#DDF1E4]/80">Approved Intake</p>
+              <p className="font-display font-bold text-base sm:text-lg text-white mt-1 tabular-nums">
                 {course.intakeSeats} Seats
               </p>
             </div>
-            <div className="rounded-2xl bg-[#FFFFFF]/10 border border-[#DDF1E4]/20 p-4">
-              <p className="text-xs text-[#DDF1E4]/80">Annual Tuition</p>
-              <p className="font-display font-bold text-lg text-[#D4A533] mt-1 tabular-nums">
+            <div className="rounded-2xl bg-[#FFFFFF]/10 border border-[#DDF1E4]/20 p-3.5 sm:p-4">
+              <p className="text-[11px] sm:text-xs text-[#DDF1E4]/80">Annual Tuition</p>
+              <p className="font-display font-bold text-base sm:text-lg text-[#D4A533] mt-1 tabular-nums">
                 {course.annualFee}
               </p>
             </div>
-            <div className="rounded-2xl bg-[#FFFFFF]/10 border border-[#DDF1E4]/20 p-4">
-              <p className="text-xs text-[#DDF1E4]/80">Admission Pathway</p>
-              <p className="font-display font-semibold text-sm text-white mt-1 leading-snug">
+            <div className="rounded-2xl bg-[#FFFFFF]/10 border border-[#DDF1E4]/20 p-3.5 sm:p-4">
+              <p className="text-[11px] sm:text-xs text-[#DDF1E4]/80">Admission Pathway</p>
+              <p className="font-display font-semibold text-xs sm:text-sm text-white mt-1 leading-snug">
                 {course.admissionMode}
               </p>
             </div>
@@ -152,7 +154,7 @@ export function CourseDetailPage({ courseSlug, onNavigate }: CourseDetailPagePro
                 Autonomous Curriculum Structure
               </h2>
 
-              <div className="inline-flex flex-wrap gap-1 p-1 rounded-xl bg-[#DDF1E4]/75 mb-4">
+              <div className="flex overflow-x-auto no-scrollbar sm:inline-flex gap-1 p-1 rounded-xl bg-[#DDF1E4]/75 mb-4 max-w-full">
                 {course.curriculum.map((block, idx) => (
                   <button
                     key={block.semester}

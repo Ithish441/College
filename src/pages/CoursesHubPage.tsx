@@ -47,7 +47,7 @@ export function CoursesHubPage({ onNavigate }: CoursesHubPageProps) {
       {/* Filter & Search Bar */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
-          <div className="inline-flex items-center gap-1 p-1 bg-[#DDF1E4]/70 rounded-xl self-start">
+          <div className="flex overflow-x-auto no-scrollbar sm:inline-flex items-center gap-1 p-1 bg-[#DDF1E4]/70 rounded-xl max-w-full self-start">
             {(
               [
                 ['ALL', 'All Programs (6)'],

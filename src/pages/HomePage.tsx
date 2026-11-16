@@ -31,8 +31,8 @@ export function HomePage({ onNavigate }: HomePageProps) {
   return (
     <div className="bg-[#FAF8F2]">
       {/* 1. Forest Emerald Atmospheric Hero Banner */}
-      <section className="px-3 sm:px-6 lg:px-8 pt-4 pb-6">
-        <div className="max-w-7xl mx-auto relative overflow-hidden rounded-3xl bg-gradient-to-b from-[#14402B] via-[#1F5F3F] to-[#2B7852] text-white shadow-xl">
+      <section className="px-3 sm:px-6 lg:px-8 pt-3 sm:pt-4 pb-5 sm:pb-6">
+        <div className="max-w-7xl mx-auto relative overflow-hidden rounded-2xl sm:rounded-3xl bg-gradient-to-b from-[#14402B] via-[#1F5F3F] to-[#2B7852] text-white shadow-xl">
           {/* Fast GPU-friendly campus backdrop without heavy mix-blend filters */}
           <div className="absolute inset-0 pointer-events-none">
             <SafeImage
@@ -44,26 +44,26 @@ export function HomePage({ onNavigate }: HomePageProps) {
             <div className="absolute inset-0 bg-gradient-to-b from-[#14402B]/85 via-[#1F5F3F]/75 to-[#1F5F3F]/90" />
           </div>
 
-          <div className="relative z-10 px-5 sm:px-10 pt-10 sm:pt-14 pb-10 sm:pb-12 text-center">
+          <div className="relative z-10 px-4 sm:px-10 pt-8 sm:pt-14 pb-8 sm:pb-12 text-center">
             {/* Primary Display Headline */}
-            <h1 className="font-display font-bold tracking-tight text-white text-balance max-w-3xl mx-auto text-[clamp(2.25rem,4.5vw,3.85rem)] leading-[1.08]">
+            <h1 className="font-display font-bold tracking-tight text-white text-balance max-w-3xl mx-auto text-[1.75rem] sm:text-4xl lg:text-[3.5rem] leading-[1.12]">
               Shaping future leaders in Commerce, Tech and Management
             </h1>
 
-            <p className="mt-4 max-w-xl mx-auto text-sm sm:text-base text-[#DDF1E4]/90 leading-relaxed">
+            <p className="mt-3 sm:mt-4 max-w-xl mx-auto text-sm sm:text-base text-[#DDF1E4]/90 leading-relaxed">
               Industry-integrated UG &amp; PG degrees in the heart of King Koti, Hyderabad —
               combining autonomous academic rigor with dedicated corporate placement mentorship.
             </p>
 
             {/* Hero Actions: Secondary Glass + Primary Gold CTA */}
-            <div className="mt-7 flex flex-wrap items-center justify-center gap-3.5">
+            <div className="mt-6 sm:mt-7 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 max-w-[260px] sm:max-w-none mx-auto">
               <motion.button
                 type="button"
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.97 }}
                 transition={{ duration: 0.14 }}
                 onClick={() => onNavigate('courses')}
-                className="inline-flex items-center justify-center rounded-full bg-[#14402B]/70 hover:bg-[#14402B]/90 border border-[#DDF1E4]/30 text-white text-sm font-semibold px-6 py-3 transition-colors duration-150 whitespace-nowrap shrink-0 cursor-pointer"
+                className="inline-flex items-center justify-center rounded-full bg-[#14402B]/70 hover:bg-[#14402B]/90 border border-[#DDF1E4]/30 text-white text-sm font-semibold px-6 py-3 min-h-[44px] transition-colors duration-150 whitespace-nowrap shrink-0 cursor-pointer"
               >
                 Explore Courses
               </motion.button>
@@ -74,7 +74,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
                 whileTap={{ scale: 0.97 }}
                 transition={{ duration: 0.14 }}
                 onClick={() => onNavigate('apply')}
-                className="inline-flex items-center gap-2.5 rounded-full bg-[#D4A533] hover:bg-[#c59628] text-[#14402B] text-sm font-semibold pl-6 pr-2.5 py-2 transition-colors duration-150 whitespace-nowrap shrink-0 shadow-md cursor-pointer"
+                className="inline-flex items-center justify-center gap-2.5 rounded-full bg-[#D4A533] hover:bg-[#c59628] text-[#14402B] text-sm font-semibold pl-6 pr-2.5 py-2 min-h-[44px] transition-colors duration-150 whitespace-nowrap shrink-0 shadow-md cursor-pointer"
               >
                 <span>Apply Now</span>
                 <span className="w-8 h-8 rounded-full bg-[#14402B] text-[#D4A533] inline-flex items-center justify-center">
@@ -83,9 +83,9 @@ export function HomePage({ onNavigate }: HomePageProps) {
               </motion.button>
             </div>
 
-            {/* Interactive Curved / Fanned Showcase Card Arc */}
-            <div className="mt-10 sm:mt-12">
-              <div className="flex md:grid md:grid-cols-7 gap-3 overflow-x-auto md:overflow-visible pb-3 md:pb-0 snap-x snap-mandatory items-stretch">
+            {/* Interactive Showcase Grid (2-col balanced mosaic on mobile, 7-card fanned arc on md+) */}
+            <div className="mt-8 sm:mt-12">
+              <div className="grid grid-cols-2 md:grid-cols-7 gap-2.5 sm:gap-3 items-stretch">
                 {/* Card 1: B.Com Honors */}
                 <motion.button
                   type="button"
@@ -95,7 +95,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
                   whileHover={{ y: -8, scale: 1.03, rotate: 0 }}
                   whileTap={{ scale: 0.97 }}
                   transition={{ type: 'spring', stiffness: 420, damping: 28 }}
-                  className={`snap-center shrink-0 w-44 md:w-auto text-left rounded-2xl bg-[#FFFFFF] text-[#1E2A24] p-3.5 shadow-lg md:translate-y-4 md:-rotate-3 cursor-pointer flex flex-col justify-between will-change-transform ${
+                  className={`text-left rounded-2xl bg-[#FFFFFF] text-[#1E2A24] p-3.5 shadow-lg md:translate-y-4 md:-rotate-3 cursor-pointer flex flex-col justify-between min-h-[132px] md:min-h-0 will-change-transform ${
                     activeArcIndex === 0 ? 'ring-2 ring-[#D4A533]' : ''
                   }`}
                 >
@@ -103,7 +103,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
                     <p className="text-[11px] font-semibold text-[#1F5F3F]">UG Commerce</p>
                     <p className="font-display font-bold text-sm mt-1">B.Com Honors</p>
                   </div>
-                  <div className="mt-4 pt-2 border-t border-[#1E2A24]/10">
+                  <div className="mt-3 pt-2 border-t border-[#1E2A24]/10">
                     <p className="font-mono text-xs font-semibold text-[#1E2A24] tabular-nums">
                       360 Seats
                     </p>
@@ -120,11 +120,11 @@ export function HomePage({ onNavigate }: HomePageProps) {
                   whileHover={{ y: -8, scale: 1.03, rotate: 0 }}
                   whileTap={{ scale: 0.97 }}
                   transition={{ type: 'spring', stiffness: 420, damping: 28 }}
-                  className={`snap-center shrink-0 w-44 md:w-auto text-left rounded-2xl bg-[#FFFFFF] text-[#1E2A24] p-3 shadow-lg md:translate-y-2 md:-rotate-2 cursor-pointer flex flex-col justify-between will-change-transform ${
+                  className={`text-left rounded-2xl bg-[#FFFFFF] text-[#1E2A24] p-3 shadow-lg md:translate-y-2 md:-rotate-2 cursor-pointer flex flex-col justify-between min-h-[132px] md:min-h-0 will-change-transform ${
                     activeArcIndex === 1 ? 'ring-2 ring-[#D4A533]' : ''
                   }`}
                 >
-                  <div className="h-20 rounded-xl overflow-hidden mb-2.5">
+                  <div className="h-16 sm:h-20 rounded-xl overflow-hidden mb-2">
                     <SafeImage
                       src={COLLEGE_IMAGES.library}
                       alt="Central Library"
@@ -147,7 +147,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
                   whileHover={{ y: -8, scale: 1.03, rotate: 0 }}
                   whileTap={{ scale: 0.97 }}
                   transition={{ type: 'spring', stiffness: 420, damping: 28 }}
-                  className={`snap-center shrink-0 w-44 md:w-auto text-left rounded-2xl overflow-hidden relative bg-[#14402B] text-white shadow-lg md:translate-y-1 md:-rotate-1 cursor-pointer min-h-[152px] will-change-transform ${
+                  className={`text-left rounded-2xl overflow-hidden relative bg-[#14402B] text-white shadow-lg md:translate-y-1 md:-rotate-1 cursor-pointer min-h-[136px] md:min-h-[152px] will-change-transform ${
                     activeArcIndex === 2 ? 'ring-2 ring-[#D4A533]' : ''
                   }`}
                 >
@@ -173,11 +173,11 @@ export function HomePage({ onNavigate }: HomePageProps) {
                   whileHover={{ y: -8, scale: 1.04 }}
                   whileTap={{ scale: 0.97 }}
                   transition={{ type: 'spring', stiffness: 420, damping: 28 }}
-                  className={`snap-center shrink-0 w-44 md:w-auto text-left rounded-2xl bg-[#FFFFFF] text-[#1E2A24] p-3 shadow-xl cursor-pointer flex flex-col justify-between will-change-transform ${
+                  className={`text-left rounded-2xl bg-[#FFFFFF] text-[#1E2A24] p-3 shadow-xl cursor-pointer flex flex-col justify-between min-h-[136px] md:min-h-0 will-change-transform ${
                     activeArcIndex === 3 ? 'ring-2 ring-[#D4A533]' : ''
                   }`}
                 >
-                  <div className="h-20 rounded-xl overflow-hidden mb-2.5">
+                  <div className="h-16 sm:h-20 rounded-xl overflow-hidden mb-2">
                     <SafeImage
                       src={COLLEGE_IMAGES.dataScienceLab}
                       alt="Data Science Lab"
@@ -191,7 +191,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
                   </div>
                 </motion.button>
 
-                {/* Card 5: Deep Forest Dark Contrast Card */}
+                {/* Card 5: Mint Contrast Card */}
                 <motion.button
                   type="button"
                   onMouseEnter={() => setActiveArcIndex(4)}
@@ -200,23 +200,25 @@ export function HomePage({ onNavigate }: HomePageProps) {
                   whileHover={{ y: -8, scale: 1.03, rotate: 0 }}
                   whileTap={{ scale: 0.97 }}
                   transition={{ type: 'spring', stiffness: 420, damping: 28 }}
-                  className={`snap-center shrink-0 w-44 md:w-auto text-left rounded-2xl bg-[#14402B] text-white p-3.5 shadow-xl md:translate-y-1 md:rotate-1 cursor-pointer flex flex-col justify-between border border-[#4CAF7A]/25 will-change-transform ${
+                  className={`text-left rounded-2xl bg-[#DDF1E4] text-[#14402B] p-3.5 shadow-xl md:translate-y-1 md:rotate-1 cursor-pointer flex flex-col justify-between border border-[#4CAF7A]/40 min-h-[132px] md:min-h-0 will-change-transform ${
                     activeArcIndex === 4 ? 'ring-2 ring-[#D4A533]' : ''
                   }`}
                 >
-                  <p className="font-display font-semibold text-xs leading-snug">
+                  <p className="font-display font-semibold text-xs leading-snug text-[#14402B]">
                     Curriculum built for{' '}
-                    <span className="text-[#D4A533]">Commerce, Analytics &amp; Leadership</span>
+                    <span className="text-[#1F5F3F] font-bold">
+                      Commerce, Analytics &amp; Leadership
+                    </span>
                   </p>
-                  <div className="mt-4 pt-2 border-t border-[#4CAF7A]/20">
-                    <p className="font-mono text-sm font-bold text-[#4CAF7A] tabular-nums">
+                  <div className="mt-3 pt-2 border-t border-[#1F5F3F]/20">
+                    <p className="font-mono text-sm font-bold text-[#14402B] tabular-nums">
                       94% Placed
                     </p>
-                    <p className="text-[11px] text-[#DDF1E4]/80">Placement Cell</p>
+                    <p className="text-[11px] font-medium text-[#1F5F3F]">Placement Cell</p>
                   </div>
                 </motion.button>
 
-                {/* Card 6: MBA & MCA PG Track */}
+                {/* Card 6: MBA & MCA PG Track (Gold Fill) */}
                 <motion.button
                   type="button"
                   onMouseEnter={() => setActiveArcIndex(5)}
@@ -225,16 +227,16 @@ export function HomePage({ onNavigate }: HomePageProps) {
                   whileHover={{ y: -8, scale: 1.03, rotate: 0 }}
                   whileTap={{ scale: 0.97 }}
                   transition={{ type: 'spring', stiffness: 420, damping: 28 }}
-                  className={`snap-center shrink-0 w-44 md:w-auto text-left rounded-2xl bg-[#1F5F3F] text-white p-3.5 shadow-lg md:translate-y-2 md:rotate-2 cursor-pointer flex flex-col justify-between border border-[#DDF1E4]/25 will-change-transform ${
-                    activeArcIndex === 5 ? 'ring-2 ring-[#D4A533]' : ''
+                  className={`text-left rounded-2xl bg-[#D4A533] text-[#14402B] p-3.5 shadow-lg md:translate-y-2 md:rotate-2 cursor-pointer flex flex-col justify-between border border-[#FFFFFF]/30 min-h-[132px] md:min-h-0 will-change-transform ${
+                    activeArcIndex === 5 ? 'ring-2 ring-[#FFFFFF]' : ''
                   }`}
                 >
-                  <div className="w-7 h-7 rounded-full bg-[#D4A533] text-[#14402B] flex items-center justify-center">
+                  <div className="w-7 h-7 rounded-full bg-[#14402B] text-[#D4A533] flex items-center justify-center">
                     <GraduationCap className="w-4 h-4" aria-hidden="true" />
                   </div>
-                  <div className="mt-4">
-                    <p className="font-display font-bold text-xs">MBA &amp; MCA</p>
-                    <p className="text-[11px] text-[#DDF1E4] mt-0.5">
+                  <div className="mt-3">
+                    <p className="font-display font-bold text-xs text-[#14402B]">MBA &amp; MCA</p>
+                    <p className="text-[11px] font-medium text-[#14402B]/85 mt-0.5">
                       TS ICET &amp; Management Seats
                     </p>
                   </div>
@@ -249,20 +251,21 @@ export function HomePage({ onNavigate }: HomePageProps) {
                   whileHover={{ y: -8, scale: 1.03, rotate: 0 }}
                   whileTap={{ scale: 0.97 }}
                   transition={{ type: 'spring', stiffness: 420, damping: 28 }}
-                  className={`snap-center shrink-0 w-44 md:w-auto text-left rounded-2xl bg-[#FFFFFF] text-[#1E2A24] p-3.5 shadow-lg md:translate-y-4 md:rotate-3 cursor-pointer flex flex-col justify-between will-change-transform ${
+                  className={`col-span-2 md:col-span-1 text-left rounded-2xl bg-[#FFFFFF] text-[#1E2A24] p-3.5 shadow-lg md:translate-y-4 md:rotate-3 cursor-pointer flex flex-row items-center justify-between md:flex-col md:items-stretch will-change-transform ${
                     activeArcIndex === 6 ? 'ring-2 ring-[#D4A533]' : ''
                   }`}
                 >
                   <div>
                     <p className="text-[11px] font-medium text-[#5E6E66]">Top Package</p>
-                    <p className="font-display font-bold text-lg text-[#14402B] tabular-nums mt-1">
+                    <p className="font-display font-bold text-lg text-[#14402B] tabular-nums mt-0.5 md:mt-1">
                       ₹14.5 LPA
                     </p>
                   </div>
-                  <div className="mt-3 pt-2 border-t border-[#1E2A24]/10">
-                    <p className="text-[11px] font-semibold text-[#1F5F3F] tabular-nums">
+                  <div className="md:mt-3 md:pt-2 md:border-t md:border-[#1E2A24]/10 text-right md:text-left">
+                    <p className="text-xs md:text-[11px] font-semibold text-[#1F5F3F] tabular-nums">
                       120+ Recruiters
                     </p>
+                    <p className="text-[11px] text-[#5E6E66] md:hidden">View Placement Record</p>
                   </div>
                 </motion.button>
               </div>
@@ -311,32 +314,32 @@ export function HomePage({ onNavigate }: HomePageProps) {
       </section>
 
       {/* 3. Editorial About & Quick Stats Bento Grid */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
         <div className="text-center max-w-3xl mx-auto">
-          <p className="text-xs font-semibold tracking-wider text-[#1F5F3F] uppercase mb-3">
+          <p className="text-xs font-semibold tracking-wider text-[#1F5F3F] uppercase mb-2.5 sm:mb-3">
             About St. Joseph&apos;s
           </p>
-          <h2 className="font-display font-bold text-[#1E2A24] tracking-tight text-balance text-2xl sm:text-4xl leading-tight">
+          <h2 className="font-display font-bold text-[#1E2A24] tracking-tight text-balance text-2xl sm:text-4xl leading-snug sm:leading-tight">
             An autonomous Hyderabad college dedicated to{' '}
-            <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#1F5F3F] text-white align-middle mx-1">
-              <BookOpen className="w-4 h-4" aria-hidden="true" />
+            <span className="inline-flex items-center justify-center w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-[#1F5F3F] text-white align-middle mx-0.5 sm:mx-1">
+              <BookOpen className="w-3.5 h-3.5 sm:w-4 sm:h-4" aria-hidden="true" />
             </span>{' '}
             sharper scholars{' '}
             <span className="text-[#5E6E66] font-semibold">and</span>{' '}
-            <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#4CAF7A] text-[#14402B] align-middle mx-1">
-              <TrendingUp className="w-4 h-4" aria-hidden="true" />
+            <span className="inline-flex items-center justify-center w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-[#4CAF7A] text-[#14402B] align-middle mx-0.5 sm:mx-1">
+              <TrendingUp className="w-3.5 h-3.5 sm:w-4 sm:h-4" aria-hidden="true" />
             </span>{' '}
             career-ready graduates
           </h2>
         </div>
 
         {/* 3-Column Asymmetric Bento Grid */}
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+        <div className="mt-8 sm:mt-12 grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 items-stretch">
           {/* Bento Card 1: Tall Portrait with Bottom Metric Overlay */}
           <motion.div
             whileHover={{ y: -4 }}
             transition={{ duration: 0.16, ease: [0.16, 1, 0.3, 1] }}
-            className="relative rounded-3xl overflow-hidden min-h-[340px] bg-[#1F5F3F] border border-[#1E2A24]/10 flex flex-col justify-end p-4"
+            className="relative rounded-3xl overflow-hidden min-h-[280px] sm:min-h-[340px] bg-[#1F5F3F] border border-[#1E2A24]/10 flex flex-col justify-end p-4"
           >
             <SafeImage
               src={COLLEGE_IMAGES.studentPortrait}
@@ -448,9 +451,9 @@ export function HomePage({ onNavigate }: HomePageProps) {
       <ManagementSection onNavigate={onNavigate} />
 
       {/* 5. Featured Courses Hub Preview */}
-      <section className="bg-[#FFFFFF] border-y border-[#1E2A24]/10 py-16 sm:py-20">
+      <section className="bg-[#FFFFFF] border-y border-[#1E2A24]/10 py-12 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 sm:gap-6 mb-7 sm:mb-10">
             <div>
               <h2 className="font-display font-bold text-2xl sm:text-4xl text-[#1E2A24] tracking-tight text-balance">
                 Six career-focused UG &amp; PG degrees
@@ -466,7 +469,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
             </button>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {COURSES.slice(0, 4).map((course) => (
               <motion.div
                 key={course.slug}
@@ -475,14 +478,14 @@ export function HomePage({ onNavigate }: HomePageProps) {
                 className="group rounded-2xl bg-[#FAF8F2] border border-[#1E2A24]/12 overflow-hidden flex flex-col justify-between hover:shadow-md will-change-transform"
               >
                 <div>
-                  <div className="h-44 overflow-hidden bg-[#DDF1E4]/40">
+                  <div className="h-40 sm:h-44 overflow-hidden bg-[#DDF1E4]/40">
                     <SafeImage
                       src={course.image}
                       alt={course.fullTitle}
                       className="w-full h-full object-cover transition-transform duration-200 group-hover:scale-105"
                     />
                   </div>
-                  <div className="p-6">
+                  <div className="p-4 sm:p-6">
                     <div className="flex items-center gap-2 text-xs text-[#5E6E66]">
                       <span className="font-semibold text-[#1F5F3F]">{course.level}</span>
                       <span aria-hidden="true">·</span>
@@ -492,15 +495,17 @@ export function HomePage({ onNavigate }: HomePageProps) {
                     <h3 className="font-display font-bold text-xl text-[#1E2A24] mt-2">
                       {course.shortTitle}
                     </h3>
-                    <p className="text-sm text-[#5E6E66] mt-2 leading-relaxed">{course.tagline}</p>
+                    <p className="text-sm text-[#5E6E66] mt-1.5 sm:mt-2 leading-relaxed">
+                      {course.tagline}
+                    </p>
                   </div>
                 </div>
 
-                <div className="px-6 pb-6 pt-3 border-t border-[#1E2A24]/10 flex items-center justify-between gap-4">
+                <div className="px-4 pb-4 pt-3 sm:px-6 sm:pb-6 border-t border-[#1E2A24]/10 flex items-center justify-between gap-4">
                   <button
                     type="button"
                     onClick={() => onNavigate('course-detail', course.slug)}
-                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#1F5F3F] hover:text-[#14402B] cursor-pointer"
+                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#1F5F3F] hover:text-[#14402B] cursor-pointer min-h-[40px]"
                   >
                     <span>Syllabus &amp; Details</span>
                     <ArrowUpRight className="w-4 h-4" aria-hidden="true" />
@@ -508,7 +513,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
                   <button
                     type="button"
                     onClick={() => onNavigate('apply', course.slug)}
-                    className="text-xs font-semibold text-[#14402B] bg-[#D4A533] hover:bg-[#c59628] px-3.5 py-1.5 rounded-full transition-colors cursor-pointer whitespace-nowrap"
+                    className="text-xs font-semibold text-[#14402B] bg-[#D4A533] hover:bg-[#c59628] px-4 py-2 rounded-full transition-colors cursor-pointer whitespace-nowrap"
                   >
                     Apply
                   </button>
@@ -520,8 +525,8 @@ export function HomePage({ onNavigate }: HomePageProps) {
       </section>
 
       {/* 6. Attributable Student & Alumni Testimonials */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 sm:gap-6 mb-7 sm:mb-10">
           <div>
             <h2 className="font-display font-bold text-2xl sm:text-4xl text-[#1E2A24] tracking-tight text-balance">
               Verified graduate stories
@@ -537,16 +542,16 @@ export function HomePage({ onNavigate }: HomePageProps) {
           </button>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
           {TESTIMONIALS.map((item) => (
             <motion.article
               key={item.name}
               whileHover={{ y: -3 }}
               transition={{ duration: 0.16, ease: [0.16, 1, 0.3, 1] }}
-              className="rounded-2xl bg-[#FFFFFF] border border-[#1E2A24]/10 p-6 flex flex-col justify-between"
+              className="rounded-2xl bg-[#FFFFFF] border border-[#1E2A24]/10 p-5 sm:p-6 flex flex-col justify-between"
             >
               <div>
-                <div className="flex items-center justify-between gap-2 text-xs text-[#5E6E66] mb-4">
+                <div className="flex items-center justify-between gap-2 text-xs text-[#5E6E66] mb-3 sm:mb-4">
                   <span>{item.program}</span>
                   <span className="font-mono font-semibold text-[#1F5F3F] tabular-nums">
                     {item.metric}
@@ -554,7 +559,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
                 </div>
                 <p className="text-sm text-[#1E2A24] leading-relaxed">&ldquo;{item.quote}&rdquo;</p>
               </div>
-              <div className="mt-6 pt-4 border-t border-[#1E2A24]/10">
+              <div className="mt-5 sm:mt-6 pt-3.5 sm:pt-4 border-t border-[#1E2A24]/10">
                 <p className="font-display font-bold text-sm text-[#1E2A24]">{item.name}</p>
                 <p className="text-xs text-[#5E6E66] mt-0.5">{item.outcome}</p>
               </div>
@@ -563,9 +568,9 @@ export function HomePage({ onNavigate }: HomePageProps) {
         </div>
 
         {/* Bottom Conversion Strip */}
-        <div className="mt-14 rounded-3xl bg-gradient-to-r from-[#14402B] to-[#1F5F3F] text-white p-8 sm:p-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+        <div className="mt-10 sm:mt-14 rounded-2xl sm:rounded-3xl bg-gradient-to-r from-[#14402B] to-[#1F5F3F] text-white p-6 sm:p-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-5 sm:gap-6">
           <div className="space-y-2 max-w-2xl">
-            <h3 className="font-display font-bold text-2xl sm:text-3xl tracking-tight">
+            <h3 className="font-display font-bold text-xl sm:text-3xl tracking-tight">
               Ready to join the 2026–27 cohort at King Koti?
             </h3>
             <p className="text-sm sm:text-base text-[#DDF1E4]/90">
@@ -573,12 +578,12 @@ export function HomePage({ onNavigate }: HomePageProps) {
               counsellors on {COLLEGE_INFO.admissionsHelpline}.
             </p>
           </div>
-          <div className="flex flex-wrap items-center gap-3 shrink-0">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto shrink-0">
             <motion.button
               type="button"
               whileTap={{ scale: 0.97 }}
               onClick={() => onNavigate('apply')}
-              className="inline-flex items-center gap-2 rounded-full bg-[#D4A533] hover:bg-[#c59628] text-[#14402B] font-semibold text-sm px-6 py-3 transition-colors cursor-pointer whitespace-nowrap"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-[#D4A533] hover:bg-[#c59628] text-[#14402B] font-semibold text-sm px-6 py-3 min-h-[44px] transition-colors cursor-pointer whitespace-nowrap"
             >
               <span>Start Application</span>
               <ArrowUpRight className="w-4 h-4" aria-hidden="true" />
@@ -586,7 +591,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
             <button
               type="button"
               onClick={() => onNavigate('contact')}
-              className="inline-flex items-center gap-2 rounded-full border border-[#DDF1E4]/35 hover:bg-[#FFFFFF]/10 text-white font-medium text-sm px-5 py-3 transition-colors cursor-pointer whitespace-nowrap"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-[#DDF1E4]/35 hover:bg-[#FFFFFF]/10 text-white font-medium text-sm px-5 py-3 min-h-[44px] transition-colors cursor-pointer whitespace-nowrap"
             >
               <Users className="w-4 h-4" aria-hidden="true" />
               <span>Book Campus Tour</span>

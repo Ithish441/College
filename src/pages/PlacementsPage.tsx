@@ -36,16 +36,16 @@ export function PlacementsPage({ onNavigate }: PlacementsPageProps) {
 
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 space-y-16">
         {/* Top Metrics */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5">
           {[
             { label: 'Placement Assistance Rate', value: '94%', tone: 'bg-[#DDF1E4] border-[#4CAF7A]/40 text-[#14402B]' },
             { label: 'Highest Package (2025–26)', value: '₹14.5 LPA', tone: 'bg-[#D4A533]/20 border-[#D4A533]/50 text-[#14402B]' },
             { label: 'Average CTC Package', value: '₹5.8 LPA', tone: 'bg-[#FFFFFF] border-[#1E2A24]/12 text-[#1E2A24]' },
             { label: 'Visiting Recruiters', value: '124+', tone: 'bg-[#14402B] text-white border-[#1F5F3F]' },
           ].map((stat) => (
-            <div key={stat.label} className={`rounded-2xl border p-6 ${stat.tone}`}>
-              <p className="text-xs opacity-80">{stat.label}</p>
-              <p className="font-display font-bold text-3xl sm:text-4xl tabular-nums mt-2">
+            <div key={stat.label} className={`rounded-2xl border p-4 sm:p-6 ${stat.tone}`}>
+              <p className="text-[11px] sm:text-xs opacity-80">{stat.label}</p>
+              <p className="font-display font-bold text-2xl sm:text-4xl tabular-nums mt-1.5 sm:mt-2">
                 {stat.value}
               </p>
             </div>
@@ -126,7 +126,7 @@ export function PlacementsPage({ onNavigate }: PlacementsPageProps) {
         </div>
 
         {/* Recruiter Directory */}
-        <div className="rounded-3xl bg-[#FFFFFF] border border-[#1E2A24]/12 p-8">
+        <div className="rounded-3xl bg-[#FFFFFF] border border-[#1E2A24]/12 p-5 sm:p-8">
           <h2 className="font-display font-bold text-2xl text-[#1E2A24] mb-4">
             Key Corporate Hiring Partners
           </h2>

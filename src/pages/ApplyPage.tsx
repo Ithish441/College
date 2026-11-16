@@ -471,7 +471,7 @@ export function ApplyPage({ initialCourseSlug }: ApplyPageProps) {
                 onChange={(e) => setLookupCode(e.target.value)}
                 aria-label="Application Reference ID"
                 placeholder="SJDPG-2026-XXXX"
-                className="flex-1 rounded-xl border border-[#1E2A24]/20 px-3 py-2 text-sm font-mono uppercase focus:outline-none focus:border-[#1F5F3F]"
+                className="flex-1 min-w-0 rounded-xl border border-[#1E2A24]/20 px-3 py-2 text-sm font-mono uppercase focus:outline-none focus:border-[#1F5F3F]"
               />
               <button
                 type="submit"

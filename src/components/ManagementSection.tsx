@@ -43,10 +43,10 @@ export function ManagementSection({ onNavigate }: ManagementSectionProps) {
   return (
     <section
       aria-label="College Management"
-      className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-16"
+      className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16"
     >
       <div>
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 sm:gap-6 mb-7 sm:mb-10">
           <div>
             <h2 className="font-display font-bold text-2xl sm:text-4xl text-[#1E2A24] tracking-tight text-balance">
               Management &amp; Governance
@@ -62,7 +62,7 @@ export function ManagementSection({ onNavigate }: ManagementSectionProps) {
           </button>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
           {MANAGEMENT_CARDS.map((card) => (
             <motion.article
               key={card.id}
@@ -78,9 +78,9 @@ export function ManagementSection({ onNavigate }: ManagementSectionProps) {
                     className="w-full h-full object-cover object-top"
                   />
                 </div>
-                <div className="p-6">
+                <div className="p-5 sm:p-6">
                   <p className="text-xs font-semibold text-[#1F5F3F]">{card.role}</p>
-                  <h3 className="font-display font-bold text-xl text-[#1E2A24] mt-1">
+                  <h3 className="font-display font-bold text-lg sm:text-xl text-[#1E2A24] mt-1">
                     {card.title}
                   </h3>
                   <p className="text-sm text-[#5E6E66] mt-2 leading-relaxed">{card.subtitle}</p>

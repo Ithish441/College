@@ -154,20 +154,24 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
                 for St. Joseph&apos;s Merit Fee Concession (up to 50% tuition waiver), alongside
                 Telangana ePASS scholarships.
               </p>
-              <div className="space-y-2 text-sm border-t border-[#DDF1E4]/20 pt-4">
-                <div className="flex items-center justify-between">
+              <div className="space-y-3 text-sm border-t border-[#DDF1E4]/20 pt-4">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-0.5 sm:gap-4">
                   <span className="inline-flex items-center gap-2 text-[#DDF1E4]">
-                    <Calendar className="w-4 h-4 text-[#D4A533]" aria-hidden="true" />
+                    <Calendar className="w-4 h-4 text-[#D4A533] shrink-0" aria-hidden="true" />
                     Early Merit Application Deadline
                   </span>
-                  <span className="font-mono font-semibold tabular-nums">June 15, 2026</span>
+                  <span className="font-mono font-semibold tabular-nums pl-6 sm:pl-0">
+                    June 15, 2026
+                  </span>
                 </div>
-                <div className="flex items-center justify-between">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-0.5 sm:gap-4">
                   <span className="inline-flex items-center gap-2 text-[#DDF1E4]">
-                    <Calendar className="w-4 h-4 text-[#D4A533]" aria-hidden="true" />
+                    <Calendar className="w-4 h-4 text-[#D4A533] shrink-0" aria-hidden="true" />
                     Commencement of Academic Classes
                   </span>
-                  <span className="font-mono font-semibold tabular-nums">July 06, 2026</span>
+                  <span className="font-mono font-semibold tabular-nums pl-6 sm:pl-0">
+                    July 06, 2026
+                  </span>
                 </div>
               </div>
             </div>
